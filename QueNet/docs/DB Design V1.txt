@@ -1,0 +1,37 @@
+
+Database Creation
+=================
+1. create table codelists (id integer auto_increment primary key,
+      ctype varchar(12),
+      ctSerial smallInt, 
+      pname varchar(48), 
+      pvalue varchar(48),
+      p1 varchar(24),
+      p2 varchar(24)
+      );
+      
+2. create table project(id integer auto_increment primary key,
+   createDate date, PIUserId integer, status varchar(12));
+   
+3. create table forms(id integer auto_increment primary key,
+   projectId varchar(24),  createDate date, name varchar(24),
+   nextFormId integer, nextFormId2 integer, nextFormId3 integer);
+   
+4. create table questions(id integer auto_increment primary key,
+   formId integer, qNo integer, 
+   qtype varchar(8), qtext varchar(48), 
+   a1 varchar(24), a2 varchar(24), a3 varchar(24), a4 varchar(24), a5 varchar(24),
+   jumpCodition varchar(8), 
+   jumpOnA1 integer, jumpOnA2 integer, jumpOnA3 integer, 
+   nextQId integer);
+   
+Initialize tables
+==================
+1. insert into codelists(ctype, ctSerial, pname, pvalue)
+   values ("QType", 0, "Format", "");
+   
+2. insert into codelists(ctype, ctserial, pname, pvalue)
+   values ("QType", 1, "YESNO", ""),
+       ("QType", 2, "SelectOne", ""),
+       ("QType", 3, "SelMultiple", ""),
+       ("QType", 4, "SelOrder", "");

@@ -1,0 +1,45 @@
+QueNet
+
+Project Document
+
+Database Design
+Revision: Initial
+Update: 2022-01-22
+===============================================================================
+
+Introduction: The project will provide a platform to develop medical 
+  questionaires that facilitate data collection, analysis and reporting.  
+  
+  1) The database will support multiple projects. All projects are independent 
+     studies but may have some common aspects, which need to be handled similarly
+     in all projects.  Therefore, there is a need to identify work-breakdown 
+     structure and mark each task/work as belonging to specific project or 
+     the common framework.  
+  
+  2) Each Project will have several forms arranged in a hierarchy.  The Common 
+     project will provide templates for forms, questions and evaluation parameters.
+     Each project will have its own copy of template forms, where necessary.
+  
+  3) Each Form will have several questions.  The forms within a project are 
+     ordered as a hierarchy (decision-tree), which will define how respondents
+     will see the questions.   The order is generally fixed but directed by the
+     answers provided by the respondent.  Respondents do not see any hierarchy 
+     but a simple one directional flow.
+     
+  4) A question can be any one of several supported types of questions. A minimal
+     format of questions would be yes-no, true-false, one-of-several, multi-choice,
+     matching options,  etc.  The answer provided by the respondent will lead 
+     to end of session, or one or more questions, in the same form or other form
+     but within the same project.  Forms or templates from common project(s) are
+     simply duplicated at the time of creation.  This allows common project to
+     evolve independent of the evolution of other projects.
+     
+  5) Evaluation methods are part of the question itself. Towards this goal,
+     the possible answers, correct options, values or key words are stored as an 
+     essential part of the question itself.
+     
+  6) The database shall support a role based user identification.  Each project
+     shall have one administrator, who can add other users or respondents. 
+     Other users can examine  
+  
+
